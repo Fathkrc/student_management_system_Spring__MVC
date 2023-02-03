@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div align="center">
-			<h2>Add / Update Student</h2>
+			<h2> Add / Update Student</h2>
 			<table>
 				<form:form modelAttribute="student" action="saveStudent" method="post">
 					<form:hidden path="id" />

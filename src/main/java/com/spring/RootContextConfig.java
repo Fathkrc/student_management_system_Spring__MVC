@@ -18,7 +18,7 @@ public class RootContextConfig {
     private Environment environment;
     //resource de bulunan verilere ulaşabilmek için çevre değişkenini autowired ile oluşturduk beanledik
     @Bean//hibernate de ki session ürettiğimiz sessionfactory springte bu şekilde bean olarak üretiliyor
-    public LocalSessionFactoryBean sessionFactoryBean(){
+    public LocalSessionFactoryBean sessionFactoryBean(){//design pattern mantığı
         LocalSessionFactoryBean LSF=new LocalSessionFactoryBean();
         LSF.setDataSource(dataSource());
         LSF.setPackagesToScan(new String[]{"com.spring.domain"});

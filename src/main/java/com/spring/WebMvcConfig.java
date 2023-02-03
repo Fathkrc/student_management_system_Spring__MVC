@@ -19,7 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Bean
     public InternalResourceViewResolver resolver() {//gelen viewleri çözümlüyoruz
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setViewClass(JstlView.class);
+        resolver.setViewClass(JstlView.class);//view tipini tanımladık
         resolver.setPrefix("/WEB-INF/views/");// view dosyalarımın nerede olduğunu yazıyorum
         resolver.setSuffix(".jsp"); // jsp uzantılı dosyaları dikkate almasını söylüyorum
         return resolver;

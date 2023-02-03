@@ -60,7 +60,10 @@ public ModelAndView sayHi(){// /students/hi
 @GetMapping("/update")//THERE IS A PROBLEM HERE
     public String updateStudent(@RequestParam("id") Long id, Model model){
     Student student=studentService.findById(id);
-    model.addAttribute(student);
+    studentService.updateStudent(student);
+    studentService.deleteStudent(student.getId());
+    model.addAttribute(student);//Modele student a bağlandı
+   // studentService.updateStudent(student);
     return "studentForm";// studentForm.jsp sayfasını client tarafına gönderiyoruz String olarak ismiyle
     //işaret ediyoruz
 }
